@@ -195,7 +195,7 @@ echo "Status: $status"
 
 # Initialize GaiaNet node with the specified configuration
 echo "⚙️ Initializing GaiaNet node with the latest configuration..."
-gaianet init --config https://raw.githubusercontent.com/abhiag/Gaia_Node/main/config1.json
+gaianet init --config https://raw.githubusercontent.com/yinghao888/Gaia_Node/main/config1.json
 status=$?
 
 if [ $status -eq 0 ]; then
@@ -211,7 +211,7 @@ else
         source ~/.bashrc
 
         echo "🔄 Retrying initialization..."
-        gaianet init --config https://raw.githubusercontent.com/abhiag/Gaia_Node/main/config1.json
+        gaianet init --config https://raw.githubusercontent.com/yinghao888/Gaia_Node/main/config1.json
         retry_status=$?
 
         if [ $retry_status -eq 0 ]; then
