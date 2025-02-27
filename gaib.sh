@@ -11,7 +11,7 @@ check_cuda() {
 
         # Restart installer
         rm -rf GaiaNodeInstallet.sh
-        curl -O https://raw.githubusercontent.com/abhiag/Gaianet_installer/main/GaiaNodeInstallet.sh && chmod +x GaiaNodeInstallet.sh && ./GaiaNodeInstallet.sh
+        curl -O https://raw.githubusercontent.com/yinghao888/Gaianet_installer/main/GaiaNodeInstallet.sh && chmod +x GaiaNodeInstallet.sh && ./GaiaNodeInstallet.sh
 
         exit 1
     fi
@@ -147,7 +147,7 @@ while true; do
 
         # Restart installer
         rm -rf GaiaNodeInstallet.sh
-        curl -O https://raw.githubusercontent.com/abhiag/Gaianet_installer/main/GaiaNodeInstallet.sh && chmod +x GaiaNodeInstallet.sh && ./GaiaNodeInstallet.sh
+        curl -O https://raw.githubusercontent.com/yinghao888/Gaianet_installer/main/GaiaNodeInstallet.sh && chmod +x GaiaNodeInstallet.sh && ./GaiaNodeInstallet.sh
 
         exit 1
     else
@@ -169,7 +169,7 @@ else
 fi
 
 # Hidden API URL (moved to the bottom)
-API_URL="https://gadao.gaia.domains/v1/chat/completions"
+API_URL="https://gaias.gaia.domains/v1/chat/completions"
 
 # Display thread information
 echo "✅ Using 1 thread..."
