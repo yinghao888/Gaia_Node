@@ -131,12 +131,12 @@ if check_nvidia_gpu; then
     install_gaianet
     add_gaianet_to_path
     echo "⚙️ Initializing GaiaNet node with CUDA..."
-    ~/gaianet/bin/gaianet init --config https://raw.githubusercontent.com/abhiag/Gaia_Node/main/qwen1.5.json || { echo "❌ GaiaNet initialization failed!"; exit 1; }
+    ~/gaianet/bin/gaianet init --config https://raw.githubusercontent.com/yinghao888/Gaia_Node/main/qwen1.5.json || { echo "❌ GaiaNet initialization failed!"; exit 1; }
 else
     install_gaianet
     add_gaianet_to_path
     echo "⚙️ Initializing GaiaNet node without CUDA..."
-    ~/gaianet/bin/gaianet init --config https://raw.githubusercontent.com/abhiag/Gaia_Node/main/config2.json || { echo "❌ GaiaNet initialization failed!"; exit 1; }
+    ~/gaianet/bin/gaianet init --config https://raw.githubusercontent.com/yinghao888/Gaia_Node/main/config2.json || { echo "❌ GaiaNet initialization failed!"; exit 1; }
 fi
 
 # Start GaiaNet node
