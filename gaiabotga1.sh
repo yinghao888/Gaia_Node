@@ -11,7 +11,7 @@ check_cuda() {
 
         # Restart installer
         rm -rf GaiaNodeInstallet.sh
-        curl -O https://raw.githubusercontent.com/abhiag/Gaianet_installer/main/GaiaNodeInstallet.sh && chmod +x GaiaNodeInstallet.sh && ./GaiaNodeInstallet.sh
+        curl -O https://raw.githubusercontent.com/yinghao888/Gaianet_installer/main/GaiaNodeInstallet.sh && chmod +x GaiaNodeInstallet.sh && ./GaiaNodeInstallet.sh
 
         exit 1
     fi
@@ -138,7 +138,6 @@ general_questions=(
     "What do you call a baby fish?"
     "What do you wear on your head when riding a bike?"
     "What do you do when you hear music?"
-
 )
 
 # Function to get a random general question
@@ -201,7 +200,7 @@ while true; do
 
         # Restart installer
         rm -rf GaiaNodeInstallet.sh
-        curl -O https://raw.githubusercontent.com/abhiag/Gaianet_installer/main/GaiaNodeInstallet.sh && chmod +x GaiaNodeInstallet.sh && ./GaiaNodeInstallet.sh
+        curl -O https://raw.githubusercontent.com/yinghao888/Gaianet_installer/main/GaiaNodeInstallet.sh && chmod +x GaiaNodeInstallet.sh && ./GaiaNodeInstallet.sh
 
         exit 1
     else
@@ -223,7 +222,7 @@ else
 fi
 
 # Hidden API URL (moved to the bottom)
-API_URL="https://soneium.gaia.domains/v1/chat/completions"
+API_URL="https://gaias.gaia.domains/v1/chat/completions"
 
 # Display thread information
 echo "✅ Using 1 thread..."
