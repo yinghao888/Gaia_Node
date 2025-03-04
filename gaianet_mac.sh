@@ -16,13 +16,8 @@ printf "\n\n"
 
 ##########################################################################################
 #                                                                                        
-#                🚀 THIS SCRIPT IS PROUDLY CREATED BY **GA CRYPTO**! 🚀                 
-#                                                                                        
-#   🌐 Join our revolution in decentralized networks and crypto innovation!               
-#                                                                                        
-# 📢 Stay updated:                                                                      
-#     • Follow us on Telegram: https://t.me/GaCryptOfficial                             
-#     • Follow us on X: https://x.com/GACryptoO                                         
+#                🚀 魔改老外 @GACryptoO! 🚀                 
+#                                                                                                                               
 ##########################################################################################
 
 # Green color for advertisement
@@ -92,7 +87,7 @@ fi
 
 # Start the GaiaNet node
 echo "🚀 Starting GaiaNet node..."
-gaianet config --domain gaia.domains
+gaianet config --domain gaias.gaia.domains
 gaianet start
 status=$?
 if [ $status -eq 0 ]; then
