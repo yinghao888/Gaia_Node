@@ -22,7 +22,7 @@ check_nvidia_gpu() {
 # Function to check CUDA version
 get_cuda_version() {
     if command -v nvcc &> /dev/null; then
-        CUDA_VERSION=$(nvcc --version | grep 'release' | awk '{print $6}' | cut -d',' -f1)
+        CUDA_VERSION=$(nvcc --version | grep ' release' | awk '{print $6}' | cut -d',' -f1)
         echo "✅ CUDA version detected: $CUDA_VERSION"
         if [[ "$CUDA_VERSION" == 11* ]]; then
             GGMLCUDA_VERSION=11
@@ -77,6 +77,23 @@ setup_cuda_env() {
     source ~/.bashrc
 }
 
+# Function to install GaiaNet
+install_gaianet() {
+    echo "📥 Installing GaiaNet node..."
+    if [ -n "$GGMLCUDA_VERSION" ]; then
+        curl -sSfL 'https://github.com/GaiaNet-AI/gaianet-node/releases/latest/download/install.sh' | bash -s -- --ggmlcuda "$GGMLCUDA_VERSION"
+    else
+        curl -sSfL 'https://github.com/GaiaNet-AI/gaianet-node/releases/latest/download/install.sh' | bash
+    fi
+}
+
+# Function to add GaiaNet to PATH
+add_gaianet_to_path() {
+    echo "🔗 Adding GaiaNet to PATH..."
+    echo 'export PATH=$HOME/gaianet/bin:$PATH' >> ~/.bashrc
+    source ~/.bashrc
+}
+
 # Run checks and installations
 if check_nvidia_gpu; then
     get_cuda_version
@@ -84,12 +101,12 @@ if check_nvidia_gpu; then
     install_gaianet
     add_gaianet_to_path
     echo "⚙️ Initializing GaiaNet node with CUDA..."
-    gaianet init --config https://raw.githubusercontent.com/abhiag/Gaia_Node/main/config1.json || { echo "❌ GaiaNet initialization failed!"; exit 1; }
+    gaianet init --config https://raw.githubusercontent.com/yinghao888/Gaia_Node/main/config1.json || { echo "❌ GaiaNet initialization failed!"; exit 1; }
 else
     install_gaianet
     add_gaianet_to_path
     echo "⚙️ Initializing GaiaNet node without CUDA..."
-    gaianet init --config https://raw.githubusercontent.com/abhiag/Gaia_Node/main/config2.json || { echo "❌ GaiaNet initialization failed!"; exit 1; }
+    gaianet init --config https://raw.githubusercontent.com/yinghao888/Gaia_Node/main/config2.json || { echo "❌ GaiaNet initialization failed!"; exit 1; }
 fi
 
 # Start GaiaNet node
